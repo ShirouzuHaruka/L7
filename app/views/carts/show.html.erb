@@ -1,0 +1,7 @@
+<% @cartItems.each do |item| %>
+    <p>
+        <%= item.product.name %>　<%= item.product.price %>円　<%= item.qty %>個　<%= link_to "カートから削除", cart_item_path(item), data: {turbo_method: :delete} %>
+    </p>
+<% end %>
+<br>
+<p>合計金額 <%= @total_price %>円</p>

@@ -1,0 +1,7 @@
+<%= form_tag products_path, method: :post, data: { turbo: false } do %>
+    <%= label_tag :name, '商品名称' %>
+    <%= text_field_tag :name %>
+    <%= label_tag :price, '商品価格' %>
+    <%= text_field_tag :price %>
+    <%= submit_tag '商品の追加' %>
+<% end %>

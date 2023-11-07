@@ -1,0 +1,10 @@
+<%= form_tag @cartItem, {action: :create} do %>
+    <%= hidden_field_tag :product_id, @product.id%>
+    <p><%= @product.name %>　<%= @product.price %>円</p>
+   
+    <%= label_tag :quantity, '数量' %>
+    <%= text_field_tag :quantity %>
+    <p>
+        <%= submit_tag '商品を登録する' %>
+    </p>
+<% end %>
